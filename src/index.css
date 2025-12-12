@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3.9%; /* Deep black */
+    --foreground: 0 0% 98%; /* Near white */
+    --card: 0 0% 7.8%; /* Slightly lighter black for cards */
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7.8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 43 80% 65%; /* Gold */
+    --primary-foreground: 0 0% 3.9%;
+    --secondary: 200 15% 40%; /* Viking blue-grey */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 200 10% 60%; /* Lighter viking for muted text */
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 200 15% 40%; /* Viking blue-grey */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%; /* Darker border */
+    --input: 0 0% 14.9%;
+    --ring: 43 80% 65%; /* Gold ring */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 7.8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7.8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 43 80% 65%;
+    --primary-foreground: 0 0% 3.9%;
+    --secondary: 200 15% 40%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 200 10% 60%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 200 15% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 43 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for the 'gold viking black' theme */
+.btn {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2;
+}
+
+.btn.primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.btn.secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+}
+
+.site-header {
+  @apply sticky top-0 backdrop-blur-sm bg-background/80 border-b border-border z-50;
+}
+
+.header-inner {
+  @apply container flex items-center justify-between gap-4 py-4;
+}
+
+.brand {
+  @apply text-gold-500 text-xl font-bold no-underline;
+}
+
+.nav {
+  @apply hidden md:flex items-center gap-4;
+}
+
+.nav a {
+  @apply text-muted-foreground hover:text-primary hover:bg-accent/20 px-3 py-2 rounded-md no-underline transition-colors;
+}
+
+.nav a[aria-current="page"] {
+  @apply text-primary bg-accent/20;
+}
+
+.nav-toggle {
+  @apply md:hidden bg-transparent border-none text-foreground text-2xl cursor-pointer;
+}
+
+.nav.open {
+  @apply flex flex-col absolute right-4 top-16 bg-card border border-border rounded-lg p-4 shadow-lg;
+}
+
+.hero {
+  @apply relative h-[55vh] flex flex-col justify-center items-center text-center text-foreground p-8 bg-cover bg-center;
+  background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80');
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+.about-hero {
+  @apply h-[55vh] flex flex-col justify-center items-center text-center text-foreground p-8 bg-black-500;
+}
+
+.about-hero h1 {
+  @apply text-5xl font-extrabold mb-4;
+}
+
+.lead {
+  @apply text-xl text-muted-foreground max-w-2xl;
+}
+
+.cta-row {
+  @apply flex gap-4 mt-8;
+}
+
+.section {
+  @apply container py-16 text-center;
+}
+
+.cards h2, .features h2, .team h2, .values h2 {
+  @apply text-4xl font-bold mb-8 text-gold-500;
+}
+
+.card-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8;
+}
+
+.card {
+  @apply bg-card p-6 rounded-lg border border-border shadow-lg transition-transform duration-200 hover:scale-105 hover:shadow-xl;
+}
+
+.card h3 {
+  @apply text-xl font-semibold mb-2 text-primary;
+}
+
+.card p {
+  @apply text-muted-foreground;
+}
+
+.feature-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8;
+}
+
+.feature {
+  @apply bg-card p-6 rounded-lg text-muted-foreground;
+}
+
+.feature h4 {
+  @apply text-lg font-semibold mb-2 text-gold-500;
+}
+
+.two-col {
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-start py-16;
+}
+
+.two-col aside {
+  @apply bg-card p-6 rounded-lg text-muted-foreground;
+}
+
+.values-list {
+  @apply list-none p-0 m-0;
+}
+
+.values-list li {
+  @apply py-2 border-b border-dashed border-border last:border-b-0 text-muted-foreground;
+}
+
+.values-list li strong {
+  @apply text-primary;
+}
+
+.site-footer {
+  @apply mt-16 py-8 border-t border-border text-muted-foreground;
+}
+
+.footer-inner {
+  @apply container flex justify-center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .two-col {
+    @apply grid-cols-1;
+  }
+  .nav {
+    @apply hidden;
+  }
+  .nav-toggle {
+    @apply block;
+  }
+  .nav.open {
+    @apply flex flex-col absolute right-4 top-16 bg-card border border-border rounded-lg p-4 shadow-lg;
+  }
+  .hero h1, .about-hero h1 {
+    @apply text-4xl;
+  }
+  .lead {
+    @apply text-lg;
+  }
+}
