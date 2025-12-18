@@ -1,40 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Entrepreneur - Kontakt</title>
-  <link rel="stylesheet" href="css/cs.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Entrepreneur</title>
+  <meta name="description" content="Kontakt Entrepreneur via e‑post eller telefon. Vi er tilgjengelige for dine spørsmål og prosjekter.">
+  <link rel="stylesheet" href="/css/cs.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-  <div id="bg-slideshow" class="bg-slideshow" aria-hidden="true">
-    <div class="slide" aria-hidden="true"></div>
-    <div class="slide" aria-hidden="true"></div>
-  </div>
+  <!-- Header lastes dynamisk her -->
+  <div id="site-header"></div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Entrepreneur</a>
-      <nav class="nav">
-        <a href="index.html">Hjem</a>
-        <a href="about.html">Om oss</a>
-        <a href="projects.html">Prosjekter</a>
-        <a href="contact.html" aria-current="page">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="site-content container">
+  <main class="site-content">
+    <!-- Hero seksjon -->
     <section class="hero">
-      <h1>Kontakt oss</h1>
-      <p>E-post: kontakt@eksempel.no · Telefon: +47 123 45 678</p>
+      <div class="bg-slideshow" aria-hidden="true">
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <h1>Kontakt oss</h1>
+        <p>Ta gjerne kontakt for en uforpliktende samtale om dine behov og muligheter.</p>
+      </div>
+    </section>
+
+    <!-- Kontaktinformasjon -->
+    <section class="contact-section">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto;">
+          <div class="contact-details">
+            <h2 style="margin-bottom: 1.5rem; color: #2d3748;">Kontaktinformasjon</h2>
+            
+            <div style="margin-bottom: 2rem;">
+              <h3 style="color: #4a5568; margin-bottom: 0.5rem;">E-post</h3>
+              <p style="font-size: 1.125rem;">
+                <a href="mailto:kontakt@eksempel.no" style="color: #3182ce; text-decoration: none; font-weight: 500;">
+                  kontakt@eksempel.no
+                </a>
+              </p>
+              <p style="color: #718096; font-size: 0.9rem; margin-top: 0.25rem;">
+                Vi svarer vanligvis innen 24 timer på hverdager.
+              </p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+              <h3 style="color: #4a5568; margin-bottom: 0.5rem;">Telefon</h3>
+              <p style="font-size: 1.125rem;">
+                <a href="tel:+4712345678" style="color: #3182ce; text-decoration: none; font-weight: 500;">
+                  +47 123 45 678
+                </a>
+              </p>
+              <p style="color: #718096; font-size: 0.9rem; margin-top: 0.25rem;">
+                Man-fre: 08:00-16:00
+              </p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+              <h3 style="color: #4a5568; margin-bottom: 0.5rem;">Adresse</h3>
+              <p style="font-size: 1.125rem; color: #2d3748;">
+                Entrepreneur AS<br>
+                Entreprenørveien 123<br>
+                0151 Oslo
+              </p>
+            </div>
+            
+            <div style="background: #f7fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3182ce;">
+              <h4 style="color: #2d3748; margin-bottom: 0.5rem;">Rask respons</h4>
+              <p style="color: #718096; margin: 0;">
+                For raskest mulig respons, anbefaler vi å bruke e-post. Skriv gjerne hva du trenger hjelp med, så vender vi tilbake med konkrete forslag.
+              </p>
+            </div>
+          </div>
+
+          <!-- Kontaktskjema -->
+          <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+            <h2 style="margin-bottom: 1.5rem; color: #2d3748;">Send oss en melding</h2>
+            
+            <form id="contact-form" style="display: grid; gap: 1.5rem;">
+              <div>
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">
+                  Navn *
+                </label>
+                <input type="text" id="name" name="name" required 
+                       style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;"
+                       placeholder="Ditt navn">
+              </div>
+              
+              <div>
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">
+                  E-post *
+                </label>
+                <input type="email" id="email" name="email" required 
+                       style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;"
+                       placeholder="din@epost.no">
+              </div>
+              
+              <div>
+                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">
+                  Melding *
+                </label>
+                <textarea id="message" name="message" rows="5" required 
+                          style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; resize: vertical;"
+                          placeholder="Hva kan vi hjelpe deg med?"></textarea>
+              </div>
+              
+              <button type="submit" 
+                      style="background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                      onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(49, 130, 206, 0.4)';"
+                      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                Send melding
+              </button>
+              
+              <div id="form-message" style="display: none; padding: 1rem; border-radius: 6px; margin-top: 1rem;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">© 2025 Entrepreneur</div>
-  </footer>
+  <!-- Footer lastes dynamisk her -->
+  <div id="site-footer"></div>
 
-  <script src="js/bg-slideshow.js"></script>
+  <!-- JavaScript -->
+  <script src="/js/bg-slideshow.js"></script>
+  <script src="/js/main.js"></script>
+  
+  <!-- Kontaktskjema JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contact-form');
+      const formMessage = document.getElementById('form-message');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          
+          const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+          };
+          
+          try {
+            // Vis lasteindikator
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sender...';
+            submitButton.disabled = true;
+            
+            // Send til API
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+              // Vis suksessmelding
+              formMessage.style.display = 'block';
+              formMessage.style.backgroundColor = '#c6f6d5';
+              formMessage.style.color = '#22543d';
+              formMessage.textContent = '✅ ' + result.message;
+              
+              // Tøm skjema
+              contactForm.reset();
+              
+              // Skjul melding etter 5 sekunder
+              setTimeout(() => {
+                formMessage.style.display = 'none';
+              }, 5000);
+            } else {
+              throw new Error(result.error || 'Noe gikk galt');
+            }
+          } catch (error) {
+            // Vis feilmelding
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = '#fed7d7';
+            formMessage.style.color = '#9b2c2c';
+            formMessage.textContent = '❌ Kunne ikke sende melding. Prøv igjen eller bruk e-post.';
+          } finally {
+            // Gjenopprett knapp
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

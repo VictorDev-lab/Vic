@@ -1,21 +1,43 @@
 {
   "name": "entrepreneur-site",
   "version": "1.0.0",
-  "description": "A web application for showcasing entrepreneurial projects and information.",
-  "main": "public/js/main.js",
+  "description": "Static site + demo API for entrepreneurial projects",
+  "main": "api/server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "start": "npx serve public",
-    "build": "echo 'Build step can be added here'",
-    "test": "echo 'No tests specified'"
+    "start": "node api/server.js",
+    "serve": "npx serve public -l 3000",
+    "api": "node api/server.js",
+    "dev": "concurrently \"npm run api\" \"npm run serve\"",
+    "dev:watch": "concurrently \"nodemon --watch api --exec node api/server.js\" \"npx serve public\"",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/entrepreneur-site.git"
   },
   "keywords": [
     "entrepreneur",
     "website",
-    "project"
+    "api",
+    "static"
   ],
   "author": "Your Name",
   "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3"
+  },
   "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^2.8.0",
+    "eslint": "^8.48.0",
     "serve": "^14.0.1"
   }
 }

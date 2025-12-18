@@ -1,40 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Entrepreneur - Prosjekter</title>
-  <link rel="stylesheet" href="css/cs.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosjekter – Entrepreneur</title>
+  <meta name="description" content="Se våre utvalgte prosjekter og case-studier. Praktiske løsninger for moderne entreprenører.">
+  <link rel="stylesheet" href="/css/cs.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-  <div id="bg-slideshow" class="bg-slideshow" aria-hidden="true">
-    <div class="slide" aria-hidden="true"></div>
-    <div class="slide" aria-hidden="true"></div>
-  </div>
+  <!-- Header lastes dynamisk her -->
+  <div id="site-header"></div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Entrepreneur</a>
-      <nav class="nav">
-        <a href="index.html">Hjem</a>
-        <a href="about.html">Om oss</a>
-        <a href="projects.html" aria-current="page">Prosjekter</a>
-        <a href="contact.html">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="site-content container">
+  <main class="site-content">
+    <!-- Hero seksjon -->
     <section class="hero">
-      <h1>Prosjekter</h1>
-      <p>Utvalgte arbeider og case-studier.</p>
+      <div class="bg-slideshow" aria-hidden="true">
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <h1>Våre Prosjekter</h1>
+        <p>Utvalgte arbeider og case-studier som viser vår tilnærming og ekspertise.</p>
+      </div>
+    </section>
+
+    <!-- Prosjektliste -->
+    <section class="projects-list-section">
+      <div class="container">
+        <div style="max-width: 1000px; margin: 0 auto;">
+          <!-- Prosjekt 1 -->
+          <div id="1" class="project-detail" style="background: white; border-radius: 12px; padding: 2.5rem; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="font-size: 2.5rem;">🚀</div>
+              <div>
+                <span style="display: inline-block; background: #bee3f8; color: #2c5282; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600;">Mal</span>
+                <h2 style="margin: 0.5rem 0 0;">Produktlanseringssett</h2>
+              </div>
+            </div>
+            
+            <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 1.5rem;">
+              Et komplett sett med maler og sjekklister for å lansere digitale produkter raskere og mer effektivt.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">MVP-definisjon</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Skille essensielt fra nice-to-have</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Lanseringsplan</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Steg-for-steg til lansering</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Brukerfeedback</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Strukturerte spørreskjemaer</p>
+              </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+              <h4 style="margin-bottom: 0.5rem;">Resultater</h4>
+              <ul style="color: #4a5568;">
+                <li>Redusert lanseringstid med 40% for kunder</li>
+                <li>Økt brukertilfredshet med 25% gjennom bedre MVP</li>
+                <li>Standardisert prosess for raskere skalering</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Prosjekt 2 -->
+          <div id="2" class="project-detail" style="background: white; border-radius: 12px; padding: 2.5rem; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="font-size: 2.5rem;">📊</div>
+              <div>
+                <span style="display: inline-block; background: #c6f6d5; color: #22543d; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600;">Forskning</span>
+                <h2 style="margin: 0.5rem 0 0;">Markedsundersøkelsesverktøy</h2>
+              </div>
+            </div>
+            
+            <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 1.5rem;">
+              En samling verktøy for å gjennomføre grundig markedsanalyse og kundeforståelse før investering i utvikling.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Konkurrentanalyse</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Systematisk kartlegging</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Kundeintervjuer</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Strukturert tilnærming</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Markedsstørrelse</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Kvantifisering av potensiale</p>
+              </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+              <h4 style="margin-bottom: 0.5rem;">Resultater</h4>
+              <ul style="color: #4a5568;">
+                <li>Identifisert 30% kostnadsbesparelser for kunder gjennom tidlig validasjon</li>
+                <li>Økt investeringssikkerhet for startups</li>
+                <li>Redusert risiko for feilproduktutvikling</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Prosjekt 3 -->
+          <div id="3" class="project-detail" style="background: white; border-radius: 12px; padding: 2.5rem; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="font-size: 2.5rem;">📈</div>
+              <div>
+                <span style="display: inline-block; background: #fed7d7; color: #9b2c2c; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600;">Strategi</span>
+                <h2 style="margin: 0.5rem 0 0;">Vekststrategi</h2>
+              </div>
+            </div>
+            
+            <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 1.5rem;">
+              En praktisk tilnærming til organisk vekst gjennom eksperimentering og dataanalyse.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">A/B-testing</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Systematisk eksperimentering</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Kundeverdi</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Lifetime value analyse</p>
+              </div>
+              <div style="background: #f7fafc; padding: 1rem; border-radius: 8px;">
+                <h4 style="margin: 0 0 0.5rem; color: #2d3748;">Kanaloptimalisering</h4>
+                <p style="margin: 0; color: #718096; font-size: 0.9rem;">Effektivitet per kanal</p>
+              </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+              <h4 style="margin-bottom: 0.5rem;">Resultater</h4>
+              <ul style="color: #4a5568;">
+                <li>Gjennomsnittlig 35% reduksjon i anskaffelseskostnad for kunder</li>
+                <li>Økt kundebeholdelse med 20%</li>
+                <li>Skalerbare prosesser for vedvarende vekst</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- CTA for nye prosjekter -->
+          <div style="text-align: center; background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%); color: white; padding: 3rem; border-radius: 12px;">
+            <h2 style="color: white; margin-bottom: 1rem;">Har du et prosjekt?</h2>
+            <p style="opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+              Vi er alltid interessert i nye utfordringer og samarbeid. Ta kontakt for å diskutere hvordan vi kan hjelpe deg.
+            </p>
+            <a href="/contact.html" class="btn" style="background: white; color: #3182ce;">Diskuter ditt prosjekt</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">© 2025 Entrepreneur</div>
-  </footer>
+  <!-- Footer lastes dynamisk her -->
+  <div id="site-footer"></div>
 
-  <script src="js/bg-slideshow.js"></script>
+  <!-- JavaScript -->
+  <script src="/js/bg-slideshow.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

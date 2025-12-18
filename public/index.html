@@ -1,85 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Entrepreneur Site</title>
-    <link rel="stylesheet" href="css/cs.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrepreneur – Moderne løsninger for entreprenører</title>
+  <meta name="description" content="Ressurser, verktøy og prosjekter for moderne entreprenører. Bygg, lansér og voks din virksomhet.">
+  <link rel="stylesheet" href="/css/cs.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="index.html">Entrepreneur</a>
-            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-            <nav id="main-nav" class="nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+  <!-- Header lastes dynamisk her -->
+  <div id="site-header"></div>
+
+  <main class="site-content">
+    <!-- Hero seksjon med bakgrunnsslideshow -->
+    <section class="hero">
+      <div class="bg-slideshow" aria-hidden="true">
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <h1>Bygg, Lansér, Voks</h1>
+        <p class="hero-subtitle">Ressurser, verktøy og virkelige prosjekter for å hjelpe moderne entreprenører med å lykkes. Vi tilbyr praktiske løsninger basert på erfaring fra hundrevis av startups.</p>
+        <div class="cta-row">
+          <a href="#prosjekter" class="btn primary">Se våre prosjekter</a>
+          <a href="/contact.html" class="btn secondary">Kontakt oss</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-inner">
-                <h1>Build, Launch, Grow</h1>
-                <p>Resources, tools and real-world projects to help modern entrepreneurs succeed.</p>
-                <p class="cta-row">
-                    <a class="btn primary" href="#projects">See Projects</a>
-                    <a class="btn" href="about.html">Learn More</a>
-                </p>
-            </div>
-        </section>
-
-        <section id="projects" class="container cards">
-            <h2>Featured Projects</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Product Launch Kit</h3>
-                    <p>A step-by-step checklist and templates to ship your first MVP faster.</p>
-                </article>
-                <article class="card">
-                    <h3>Market Research Toolkit</h3>
-                    <p>Surveys, interview scripts and frameworks for validating ideas.</p>
-                </article>
-                <article class="card">
-                    <h3>Growth Playbook</h3>
-                    <p>Proven channels and experiments to scale early traction.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="container features">
-            <h2>Why we help</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h4>Practical</h4>
-                    <p>Tools and templates you can use today — no fluff.</p>
-                </div>
-                <div class="feature">
-                    <h4>Community</h4>
-                    <p>Connect with other founders and share momentum.</p>
-                </div>
-                <div class="feature">
-                    <h4>Guidance</h4>
-                    <p>Expert advice distilled into actionable steps.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="container contact">
-            <h2>Contact</h2>
-            <p>Have a project or question? Email <a href="mailto:hello@example.com">hello@example.com</a> or follow us on social.</p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Entrepreneur Site. All rights reserved.</p>
+    <!-- Prosjektseksjon -->
+    <section id="prosjekter" class="projects-section">
+      <div class="container">
+        <h2>Våre Prosjekter</h2>
+        <p class="section-subtitle">Praktiske verktøy og ressurser basert på virkelig erfaring. Alt er testet i praksis.</p>
+        
+        <div class="projects-grid" id="projects-container">
+          <!-- Innhold lastes dynamisk fra API -->
+          <div class="project-card">
+            <div class="project-icon">🚀</div>
+            <div class="project-category">Mal</div>
+            <h3>Produktlanseringssett</h3>
+            <p>Steg-for-steg sjekkliste og maler for å lansere din MVP raskere.</p>
+            <a href="/projects.html#1" class="project-link">Se detaljer →</a>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-icon">📊</div>
+            <div class="project-category">Forskning</div>
+            <h3>Markedsundersøkelsesverktøy</h3>
+            <p>Spørreskjemaer, intervjumanus og rammeverk for å validere ideer.</p>
+            <a href="/projects.html#2" class="project-link">Se detaljer →</a>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-icon">📈</div>
+            <div class="project-category">Strategi</div>
+            <h3>Vekststrategi</h3>
+            <p>Beviste kanaler og eksperimenter for å skale tidlig trafikk.</p>
+            <a href="/projects.html#3" class="project-link">Se detaljer →</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- Funksjoner -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Hvorfor Velge Oss?</h2>
+        <p class="section-subtitle">Vi kombinerer teknologisk ekspertise med forretningsforståelse.</p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Målrettet</h3>
+            <p>Strategier som er fokusert på konkrete resultater og målbart vekst. Vi leverer det som fungerer.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Raskt</h3>
+            <p>Implementering av løsninger uten unødvendig ventetid. Vi verdsetter din tid.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Personlig</h3>
+            <p>Tilpasset tilnærming for hver enkelt klient. Ingen one-size-fits-all løsninger.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA seksjon -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%); color: white; text-align: center; padding: 4rem 0;">
+      <div class="container">
+        <h2 style="color: white;">Klar til å ta neste steg?</h2>
+        <p style="opacity: 0.9; margin-bottom: 2rem;">Kontakt oss for en uforpliktende samtale om dine muligheter.</p>
+        <a href="/contact.html" class="btn" style="background: white; color: #3182ce;">Start nå</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer lastes dynamisk her -->
+  <div id="site-footer"></div>
+
+  <!-- JavaScript -->
+  <script src="/js/bg-slideshow.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
